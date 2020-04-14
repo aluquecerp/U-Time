@@ -110,7 +110,7 @@ def run_pred(dataset,
                                  model_func=model_func,
                                  argmax=False)
         org_pred_shape = pred.shape
-        pred, y = pred.reshape(-1, 5), y.reshape(-1, 1)
+        pred, y = np.reshape(pred, (-1, 5)), np.reshape(y,(-1, 1))
 
         if not args.no_argmax:
             pred = pred.argmax(-1)

@@ -6,4 +6,4 @@ ruamel.base>=1.0.0
 scikit_learn>=0.20.0
 mne>=0.16
 MultiPlanarUNet>=0.2.3
-# tensorflow-gpu>=2.0
+tensorflow-gpu>=2.0

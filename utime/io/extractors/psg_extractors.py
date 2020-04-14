@@ -95,6 +95,7 @@ def extract_psg_data(psg_obj, load_channels, **kwargs):
 
     # Convert to float32 ndarray
     psg_data = np.array(psg_data, dtype=np.float32)
+    psg_data = np.reshape(psg_data[:, 1:], (-1, 1))
 
     if load_channels and psg_data.shape[1] != len(load_channels):
             raise ChannelNotFoundError("Unexpected channel loading error. "

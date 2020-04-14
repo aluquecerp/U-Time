@@ -319,7 +319,7 @@ def predict_on(study_pair, seq, model=None, model_func=None, argmax=True):
         # Get prediction
         pred = pred_func(study_pair, seq, model)
     if argmax:
-        pred = pred.argmax(-1)
+        pred = np.argmax(pred, -1)
     return y, pred
 
 
